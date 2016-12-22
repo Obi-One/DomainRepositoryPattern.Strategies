@@ -1,0 +1,2 @@
+# DomainRepositoryPattern.Strategies
+DomainRepositoryPattern.Strategies
