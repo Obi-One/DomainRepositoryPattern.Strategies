@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{190054C0-298F-4F95-B372-42A844DF0A11}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.EF.Specs</RootNamespace>
+    <AssemblyName>ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.EF.Specs</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Entities\SPP1Base.cs" />
+    <Compile Include="Entities\ITM1Base.cs" />
+    <Compile Include="Entities\OITWBase.cs" />
+    <Compile Include="Entities\ONNMBase.cs" />
+    <Compile Include="Entities\QUT1Base.cs" />
+    <Compile Include="Entities\CRD1Base.cs" />
+    <Compile Include="Entities\CRD7Base.cs" />
+    <Compile Include="Entities\OQUTBase.cs" />
+    <Compile Include="Entities\OCRDBase.cs" />
+    <Compile Include="Entities\OITMBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Infrastructure\VanillaEFEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DomainRepositoryPattern\Specialized\2. Strategies\EntityFramework\ObiOne.DomainRepositoryPattern.Specialized.EF\ObiOne.DomainRepositoryPattern.Specialized.EF.csproj">
+      <Project>{4ADDC823-1B1A-4FA6-AB34-5099EED825D1}</Project>
+      <Name>ObiOne.DomainRepositoryPattern.Specialized.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainRepositoryPattern\Specialized\1. Specs\ObiOne.DomainRepositoryPattern.Specialized.Specs\ObiOne.DomainRepositoryPattern.Specialized.Specs.csproj">
+      <Project>{D3C94E02-DD6A-4927-9E20-F833921F0776}</Project>
+      <Name>ObiOne.DomainRepositoryPattern.Specialized.Specs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

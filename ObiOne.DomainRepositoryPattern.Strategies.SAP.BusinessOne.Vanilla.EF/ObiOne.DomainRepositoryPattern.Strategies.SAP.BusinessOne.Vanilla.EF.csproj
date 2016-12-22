@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F4016FB-E73E-4C36-8280-97B355FEB48B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.EF</RootNamespace>
+    <AssemblyName>ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.EF</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Map\Base\SPP1MapBase.cs" />
+    <Compile Include="Map\Base\ITM1MapBase.cs" />
+    <Compile Include="Map\Base\OITWMapBase.cs" />
+    <Compile Include="Map\Base\ONNMMapBase.cs" />
+    <Compile Include="Map\Base\OQUTMapBase.cs" />
+    <Compile Include="Map\Base\QUT1MapBase.cs" />
+    <Compile Include="Map\Base\CRD1MapBase.cs" />
+    <Compile Include="Map\Base\CRD7MapBase.cs" />
+    <Compile Include="Map\Base\OCRDMapBase.cs" />
+    <Compile Include="Map\Base\OITMMapBase.cs" />
+    <Compile Include="Map\CRD1Map.cs" />
+    <Compile Include="Map\CRD7Map.cs" />
+    <Compile Include="Map\SPP1Map.cs" />
+    <Compile Include="Map\OCRDMap.cs" />
+    <Compile Include="Map\ITM1Map.cs" />
+    <Compile Include="Map\OITWMap.cs" />
+    <Compile Include="Map\OITMMap.cs" />
+    <Compile Include="Map\ONNMMap.cs" />
+    <Compile Include="Map\OQUTMap.cs" />
+    <Compile Include="Map\QUT1Map.cs" />
+    <Compile Include="VanillaEFContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VanillaEFRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DomainRepositoryPattern\Specialized\2. Strategies\EntityFramework\ObiOne.DomainRepositoryPattern.Specialized.EF\ObiOne.DomainRepositoryPattern.Specialized.EF.csproj">
+      <Project>{4ADDC823-1B1A-4FA6-AB34-5099EED825D1}</Project>
+      <Name>ObiOne.DomainRepositoryPattern.Specialized.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainRepositoryPattern\Specialized\1. Specs\ObiOne.DomainRepositoryPattern.Specialized.Specs\ObiOne.DomainRepositoryPattern.Specialized.Specs.csproj">
+      <Project>{D3C94E02-DD6A-4927-9E20-F833921F0776}</Project>
+      <Name>ObiOne.DomainRepositoryPattern.Specialized.Specs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.EF.Specs\ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.EF.Specs.csproj">
+      <Project>{190054C0-298F-4F95-B372-42A844DF0A11}</Project>
+      <Name>ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.EF.Specs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

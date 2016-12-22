@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E96D0C2-5186-4317-A7D0-CC0DA6C9234B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.DI.Specs</RootNamespace>
+    <AssemblyName>ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.DI.Specs</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Administracao\Geral\ParceiroNegocios\CondicaoPagamentoBase.cs" />
+    <Compile Include="Entities\Administracao\InicializacaoSistema\NumeracaoDocumentosBase.cs" />
+    <Compile Include="Entities\DocMkt\DocumentLinesBase.cs" />
+    <Compile Include="Entities\DocMkt\DocumentTaxExtensionBase.cs" />
+    <Compile Include="Entities\Estoque\EnClassificacaoItem.cs" />
+    <Compile Include="Entities\Financas\EnAccountType.cs" />
+    <Compile Include="Entities\Financas\EnAmountType.cs" />
+    <Compile Include="Entities\Financas\LCMBase.cs" />
+    <Compile Include="Entities\Financas\LCMLinhaBase.cs" />
+    <Compile Include="Entities\ParceiroNegocios\ParceiroNegocioEnderecoBase.cs" />
+    <Compile Include="Entities\ParceiroNegocios\ParceiroNegocioFiscalBase.cs" />
+    <Compile Include="Entities\DocMkt\DocumentBase.cs" />
+    <Compile Include="Entities\Administracao\Geral\ParceiroNegocios\GrupoPNBase.cs" />
+    <Compile Include="Entities\Administracao\Geral\ParceiroNegocios\SetorIndustrialBase.cs" />
+    <Compile Include="Infrastructure\ContainerExtensions.cs" />
+    <Compile Include="Infrastructure\DataTypeConverter.cs" />
+    <Compile Include="Infrastructure\IListExtensionMethodsToSAPBusinessOne.cs" />
+    <Compile Include="Infrastructure\VanillaDIEntity.cs" />
+    <Compile Include="Entities\Estoque\ItemInventarioBase.cs" />
+    <Compile Include="Entities\ParceiroNegocios\ParceiroNegocioBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DomainRepositoryPattern\Specialized\1. Specs\ObiOne.DomainRepositoryPattern.Specialized.Specs\ObiOne.DomainRepositoryPattern.Specialized.Specs.csproj">
+      <Project>{d3c94e02-dd6a-4927-9e20-f833921f0776}</Project>
+      <Name>ObiOne.DomainRepositoryPattern.Specialized.Specs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainRepositoryPattern\Specialized\2. Strategies\SAPBusinessOne\ObiOne.DomainRepositoryPattern.Specialized.DI\ObiOne.DomainRepositoryPattern.Specialized.DI.csproj">
+      <Project>{32F8E9AD-8084-4F3D-9A17-A65AA16A2EE6}</Project>
+      <Name>ObiOne.DomainRepositoryPattern.Specialized.DI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SAPbobsCOM">
+      <Guid>{FC8030BE-F5D2-4B8E-8F92-44228FE30090}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
