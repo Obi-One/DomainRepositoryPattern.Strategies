@@ -20,9 +20,11 @@ namespace ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.EF.S
         public virtual short Series { get; set; }
         public virtual string CardCode { get; set; }
         public virtual string CardType { get; set; }
+        public virtual short GroupCode { get; set; }
         public virtual string CardName { get; set; }
         public virtual string CardFName { get; set; }
         public virtual string E_Mail { get; set; }
+        public virtual string Password { get; set; }
         public virtual string Phone1 { get; set; }
         public virtual string Phone2 { get; set; }
         public virtual string Free_Text { get; set; }

@@ -20,6 +20,7 @@ namespace ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.EF.S
         public virtual string QryGroup1 { get; set; }
         public virtual string QryGroup9 { get; set; }
         public virtual string QryGroup10 { get; set; }
+        public virtual decimal OnHand { get; set; }
         public virtual string CodeBars { get; set; }
         public virtual string SellItem { get; set; }
         public virtual string PrchseItem { get; set; }

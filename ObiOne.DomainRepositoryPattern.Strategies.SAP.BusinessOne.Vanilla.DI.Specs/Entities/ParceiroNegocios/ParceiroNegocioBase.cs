@@ -27,7 +27,7 @@ namespace ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.DI.S
         public string NomeFantasia { get; set; }
         public int TipoPN { get; set; }
         public bool Ativo { get; set; }
-        public int TipoGrupo { get; set; }
+        public int CodigoGrupo { get; set; }
 
         public string DDD { get; set; }
         public string Telefone { get; set; }
@@ -48,7 +48,7 @@ namespace ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.DI.S
             Series = lBusinessPartners.Series;
             Id = lBusinessPartners.CardCode;
             TipoPN = (int)lBusinessPartners.CardType;
-            TipoGrupo = lBusinessPartners.GroupCode;
+            CodigoGrupo = lBusinessPartners.GroupCode;
             RazaoSocial = lBusinessPartners.CardName;
             NomeFantasia = lBusinessPartners.CardForeignName;
             Ativo = lBusinessPartners.Valid == BoYesNoEnum.tYES;
@@ -71,7 +71,7 @@ namespace ObiOne.DomainRepositoryPattern.Strategies.SAP.BusinessOne.Vanilla.DI.S
             lBusinessPartners.Series = Series;
             lBusinessPartners.CardCode = Id;
             lBusinessPartners.CardType = (BoCardTypes) TipoPN;
-            lBusinessPartners.GroupCode = TipoGrupo;
+            lBusinessPartners.GroupCode = CodigoGrupo;
             lBusinessPartners.CardName = RazaoSocial;
             lBusinessPartners.CardForeignName = NomeFantasia;
             lBusinessPartners.Valid = Ativo ? BoYesNoEnum.tYES : BoYesNoEnum.tNO;
